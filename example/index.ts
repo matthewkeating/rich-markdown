@@ -1,5 +1,5 @@
 import { EditorState } from '@codemirror/state'
-import { keymap, EditorView, drawSelection, rectangularSelection, highlightActiveLine } from '@codemirror/view'
+import { keymap, EditorView, drawSelection, rectangularSelection } from '@codemirror/view'
 import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirror/commands'
 import { defaultHighlightStyle, syntaxHighlighting, indentOnInput } from '@codemirror/language'
 import { languages } from '@codemirror/language-data';
@@ -23,7 +23,6 @@ const state = EditorState.create({
     history(),
     drawSelection(),
     rectangularSelection(),
-    highlightActiveLine(),
     indentOnInput(),
     syntaxHighlighting(defaultHighlightStyle),
     keymap.of([indentWithTab, ...defaultKeymap, ...historyKeymap]),
