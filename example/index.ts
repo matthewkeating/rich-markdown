@@ -5,7 +5,6 @@ import { defaultHighlightStyle, syntaxHighlighting, indentOnInput } from '@codem
 import { languages } from '@codemirror/language-data';
 
 import richEditor from '../src';
-import config from './markdoc';
 import './style.css';
 
 // @ts-expect-error
@@ -15,7 +14,7 @@ const state = EditorState.create({
   doc,
   extensions: [
     richEditor({
-      markdoc: config,
+      markdoc: { },
       lezer: {
         codeLanguages: languages,
       }
