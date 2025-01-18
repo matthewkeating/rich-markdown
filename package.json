@@ -31,6 +31,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@codemirror/language-data": "^6.5.1",
+    "@markdoc/markdoc": "^0.4.0",
     "electron-squirrel-startup": "^1.0.1"
   }
 }
