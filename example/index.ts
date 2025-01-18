@@ -3,7 +3,6 @@ import { keymap, EditorView, drawSelection, rectangularSelection, highlightActiv
 import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirror/commands'
 import { defaultHighlightStyle, syntaxHighlighting, indentOnInput } from '@codemirror/language'
 import { languages } from '@codemirror/language-data';
-import { Table } from '@lezer/markdown';
 
 import richEditor from '../src';
 import config from './markdoc';
@@ -19,7 +18,6 @@ const state = EditorState.create({
       markdoc: config,
       lezer: {
         codeLanguages: languages,
-        extensions: [Table]
       }
     }),
     EditorView.lineWrapping,

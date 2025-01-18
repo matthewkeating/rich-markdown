@@ -28,13 +28,6 @@ This is **formatted** text inside of a generic tag.
         * This is a deeply nested item
     * This is another indented list item
 
-## Table
-
-| Foo | Bar | Baz |
-| --- | --- | --- |
-| Cell 1 | Cell 2 | Cell 3 |
-| Cell 4 | Cell 5 | Cell 6 |
-
 ## Fenced Code Block
 
 ```javascript
