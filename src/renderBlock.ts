@@ -48,27 +48,8 @@ function replaceBlocks(state: EditorState, config: Config, from?: number, to?: n
   syntaxTree(state).iterate({
     from, to,
     enter(node) {
-      if (!['Table', 'Blockquote', 'MarkdocTag'].includes(node.name))
+      if (!['Blockquote'].includes(node.name))
         return;
-
-      if (node.name === 'MarkdocTag') {
-        const text = state.doc.sliceString(node.from, node.to);
-        const match = text.match(patternTag);
-
-        if (match?.groups?.self) {
-          tags.push([node.from, node.to]);
-          return;
-        }
-
-        if (match?.groups?.closing) {
-          const last = stack.pop();
-          if (last) tags.push([last, node.to]);
-          return;
-        }
-
-        stack.push(node.from);
-        return;
-      }
 
       if (cursor.from >= node.from && cursor.to <= node.to)
         return false;
