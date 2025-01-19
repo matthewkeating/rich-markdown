@@ -4,7 +4,7 @@ import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirro
 import { defaultHighlightStyle, syntaxHighlighting, indentOnInput } from '@codemirror/language'
 import { languages } from '@codemirror/language-data';
 
-import richEditor from '../src';
+import richEditor from '../components/rich-markdown';
 import './style.css';
 
 // @ts-expect-error
